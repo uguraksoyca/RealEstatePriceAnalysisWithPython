@@ -74,6 +74,9 @@ plt.xlabel('Total Number of Bathroom') <br>
 
 bath_counts = df['bath'].value_counts() <br>
 bath_counts <br>
+
+![BathCounts](https://user-images.githubusercontent.com/114496063/208710432-5957775b-7755-4e9a-a858-1cb4374b9eb9.png)
+
 df[hist_columns[2]].hist() <br>
 df.drop(df[(df['bath'] >10)].index, inplace=True) <br>
 df.info() <br>
