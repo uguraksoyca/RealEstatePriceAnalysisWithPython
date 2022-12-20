@@ -52,6 +52,8 @@ plt.xlabel('Total Number of Bedroom') <br>
 bed_counts = df['bed'].value_counts() <br>
 bed_counts <br>
 
+![BedCounts](https://user-images.githubusercontent.com/114496063/208708644-3d82916c-cadb-4e95-bf92-f83d4d6e6981.png)
+
 hist_columns=['price','bed','bath','house_size','acre_lot'] <br>
 df[hist_columns[1]].hist() <br>
  
