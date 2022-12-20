@@ -56,7 +56,7 @@ df[hist_columns[1]].hist() <br>
 df.drop(df[(df['bed'] >10) | (df['bed'] < 1)].index, inplace=True) <br>
 df.info() <br>
 
-## 1.2.2) Check and treat bath column
+### 1.2.2) Check and treat bath column
 #### By grouping and counting, we can see that total bathrooms bigger than 10 are outliers, so we drop them..
 df['bath'].describe() <br>
 df.groupby('bath').agg({'price':'mean'}).plot.bar(legend=False) <br>
@@ -70,7 +70,7 @@ df.drop(df[(df['bath'] >10)].index, inplace=True) <br>
 df.info() <br>
 
 
-## 1.2.3) Check and treat house_size column
+### 1.2.3) Check and treat house_size column
 #### By grouping and counting, we can see that total house sizes bigger than 10000 are outliers, so we drop them.
 df['house_size'].describe() <br>
 df['house_size_group']=np.where(df['house_size']<10000, '1-<10K', <br>
@@ -91,7 +91,7 @@ df[hist_columns[3]].hist() <br>
 df.drop(df[(df['house_size'] >10000)].index, inplace=True) <br>
 df.info() <br>
 
-## 1.2.4) Check and treat acre_lot column
+### 1.2.4) Check and treat acre_lot column
 #### By grouping and counting and checkimg percentiles, we can see that total acre lots bigger than 7.59 are outliers, so we drop them.
 df['acre_lot'].describe() <br>
 acre_lot_counts = df['acre_lot'].value_counts() <br>
