@@ -10,17 +10,23 @@ from sklearn.linear_model import LinearRegression <br>
 
 pd.options.display.max_columns = None <br>
 
+## Read file, Check the data
 df=pd.read_csv('C:/WorkSamples/HousePricePrediction/realtor-data.csv') <br>
 df.head() <br>
 df.info() <br>
 
+## 1-) DATA VALIDATION  <br>
+## 1.1) Treating Duplicates
+## Drop duplicates
 df=df.drop_duplicates() <br>
 
 df.info() <br>
 
+## Drop NAs
 df=df.dropna() <br>
 df.info() <br>
 
+## Count full address column and drop duplicates, keep the last entries.
 full_address_counts = df['full_address'].value_counts() <br>
 full_address_counts.head()
 
@@ -29,9 +35,11 @@ full_address_counts = df['full_address'].value_counts() <br>
 full_address_counts.head() <br>
 df.info() <br>
 
+## Export data as Clean Data. This is Realtor_Data_Clean.csv
 df.to_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean.csv',index=False) <br>
 df=pd.read_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean.csv') <br>
 
+## 1.1) Treating Outliers
 df['bed'].describe() <br>
 df.groupby('bed').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
