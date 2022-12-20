@@ -103,7 +103,7 @@ df['price_group']=np.where(df['price(M)']<0.275, '1-<0.275M', <br>
                        np.where(df['price(M)']<0.425, '2-0.275M-0.425M', <br>
                        np.where(df['price(M)']<0.699, '3-0.425M-0.699M', <br>
                        np.where(df['price(M)']<1, '4-0.699M-1M', <br>
-                       np.where(df['price(M)']<1.5, '5-1M-1.5M',  <br>       
+                       np.where(df['price(M)']<1.5, '5-1M-1.5M',      
                        '6->1.5M'))))) <br>
 
 price_group_counts = df['price_group'].value_counts() <br>
