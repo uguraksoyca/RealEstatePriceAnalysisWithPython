@@ -71,6 +71,7 @@ house_size_group_counts = df['house_size_group'].value_counts()
 house_size_group_counts
 df[hist_columns[3]].hist()
 
+![TotalNumberOfHouseSizeGroup](https://user-images.githubusercontent.com/114496063/208690428-c73d6418-23ef-43f7-a434-a9f53770e88d.png)
 
 df.drop(df[(df['house_size'] >10000)].index, inplace=True)
 df.info()
