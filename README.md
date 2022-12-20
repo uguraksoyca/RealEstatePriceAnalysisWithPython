@@ -70,6 +70,8 @@ df.groupby('bath').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
 plt.xlabel('Total Number of Bathroom') <br>
 
+![TotalNumberOfBathroomGroup](https://user-images.githubusercontent.com/114496063/208707906-61c13ebc-64a7-4eec-a89a-2ea70461d0b2.png)
+
 bath_counts = df['bath'].value_counts() <br>
 bath_counts <br>
 df[hist_columns[2]].hist() <br>
