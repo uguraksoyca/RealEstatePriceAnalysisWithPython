@@ -10,7 +10,7 @@ from sklearn.linear_model import LinearRegression <br>
 
 pd.options.display.max_columns = None <br>
 
-## Read file, Check the data
+## Read file, Check the data, Note that you need to point the Excel reader to wherever the file is located.
 df=pd.read_csv('C:/WorkSamples/HousePricePrediction/realtor-data.csv') <br>
 df.head() <br>
 df.info() <br>
