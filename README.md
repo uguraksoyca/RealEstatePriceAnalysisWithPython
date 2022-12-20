@@ -57,7 +57,7 @@ df.drop(df[(df['bed'] >10) | (df['bed'] < 1)].index, inplace=True) <br>
 df.info() <br>
 
 ### 1.2.2) Check and treat bath column
-#### By grouping and counting, we can see that total bathrooms bigger than 10 are outliers, so we drop them..
+#### By grouping and counting, we can see that total bathrooms bigger than 10 are outliers, so we drop them.
 df['bath'].describe() <br>
 df.groupby('bath').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
