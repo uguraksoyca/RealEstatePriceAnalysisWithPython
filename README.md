@@ -120,6 +120,7 @@ np.percentile(df['acre_lot'], 97) <br>
 np.percentile(df['acre_lot'], 98) <br>
 np.percentile(df['acre_lot'], 99) <br>
 
+![AcreLotPercentile](https://user-images.githubusercontent.com/114496063/208707804-bd11be21-c9ab-4834-98a4-50c1646c590a.png)
 
 df.drop(df[(df['acre_lot'] >7.59) |(df['acre_lot'] ==0)].index, inplace=True) <br>
 df.info() <br>
