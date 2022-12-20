@@ -15,18 +15,18 @@ df=pd.read_csv('C:/WorkSamples/HousePricePrediction/realtor-data.csv') <br>
 df.head() <br>
 df.info() <br>
 
-## 1-) DATA VALIDATION  <br>
+# 1-) DATA VALIDATION  <br>
 ## 1.1) Treating Duplicates
-## Drop duplicates
+### Drop duplicates
 df=df.drop_duplicates() <br>
 
 df.info() <br>
 
-## Drop NAs
+### Drop NAs
 df=df.dropna() <br>
 df.info() <br>
 
-## Count full address column and drop duplicates, keep the last entries.
+### Count full address column and drop duplicates, keep the last entries.
 full_address_counts = df['full_address'].value_counts() <br>
 full_address_counts.head()
 
@@ -35,13 +35,13 @@ full_address_counts = df['full_address'].value_counts() <br>
 full_address_counts.head() <br>
 df.info() <br>
 
-## Export data as Clean Data. This is Realtor_Data_Clean.csv
+### Export data as Clean Data. This is Realtor_Data_Clean.csv
 df.to_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean.csv',index=False) <br>
 df=pd.read_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean.csv') <br>
 
 ## 1.2) Treating Outliers
-## 1.2.1) Check and treat bed column
-# By grouping and counting, we can see that total bedrooms bigger than 10 are outliers, so we drop them.
+### 1.2.1) Check and treat bed column
+#### By grouping and counting, we can see that total bedrooms bigger than 10 are outliers, so we drop them.
 df['bed'].describe() <br>
 df.groupby('bed').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
@@ -57,7 +57,7 @@ df.drop(df[(df['bed'] >10) | (df['bed'] < 1)].index, inplace=True) <br>
 df.info() <br>
 
 ## 1.2.2) Check and treat bath column
-# By grouping and counting, we can see that total bathrooms bigger than 10 are outliers, so we drop them..
+#### By grouping and counting, we can see that total bathrooms bigger than 10 are outliers, so we drop them..
 df['bath'].describe() <br>
 df.groupby('bath').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
@@ -71,7 +71,7 @@ df.info() <br>
 
 
 ## 1.2.3) Check and treat house_size column
-# By grouping and counting, we can see that total house sizes bigger than 10000 are outliers, so we drop them.
+#### By grouping and counting, we can see that total house sizes bigger than 10000 are outliers, so we drop them.
 df['house_size'].describe() <br>
 df['house_size_group']=np.where(df['house_size']<10000, '1-<10K', <br>
                        np.where(df['house_size']<20000, '2-10K-20K', <br>
@@ -92,7 +92,7 @@ df.drop(df[(df['house_size'] >10000)].index, inplace=True) <br>
 df.info() <br>
 
 ## 1.2.4) Check and treat acre_lot column
-# By grouping and counting and checkimg percentiles, we can see that total acre lots bigger than 7.59 are outliers, so we drop them.
+#### By grouping and counting and checkimg percentiles, we can see that total acre lots bigger than 7.59 are outliers, so we drop them.
 df['acre_lot'].describe() <br>
 acre_lot_counts = df['acre_lot'].value_counts() <br>
 acre_lot_counts <br>
@@ -113,7 +113,7 @@ df.drop(df[(df['acre_lot'] >7.59) |(df['acre_lot'] ==0)].index, inplace=True) <b
 df.info() <br>
 
 ## 1.2.5) Check and treat price column
-# By grouping and counting and checkimg percentiles, we can see that prices bigger than 3.295M are outliers, so we drop them.
+#### By grouping and counting and checkimg percentiles, we can see that prices bigger than 3.295M are outliers, so we drop them.
 
 df['price(M)']=df['price']/1000000 <br>
 df['price(M)'].describe() <br>
