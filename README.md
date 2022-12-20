@@ -25,7 +25,7 @@ df.info() <br>
 ![DFInfo](https://user-images.githubusercontent.com/114496063/208709112-c59fab1c-b4bd-47cc-8f54-6377827b6b4d.png)
 
 ### Drop NAs
-#### There are many NA values. Instead of treating with average values we choose to drop them.
+#### There are many NA values. Instead of implementing any values, we choose to drop them.
 df=df.dropna() <br>
 df.info() <br>
 
