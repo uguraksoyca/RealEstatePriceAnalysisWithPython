@@ -152,6 +152,7 @@ np.percentile(df['price(M)'], 97) <br>
 np.percentile(df['price(M)'], 98) <br>
 np.percentile(df['price(M)'], 99) <br>
 
+![PricePercentile](https://user-images.githubusercontent.com/114496063/208707840-27b488ca-051f-4718-909b-ec1fb16050e6.png)
 
 df.drop(df[(df['price(M)'] >3.295)].index, inplace=True) <br>
 df.info() <br>
