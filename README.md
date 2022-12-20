@@ -47,6 +47,8 @@ df.groupby('bed').agg({'price':'mean'}).plot.bar(legend=False) <br>
 plt.ylabel('Avg Price') <br>
 plt.xlabel('Total Number of Bedroom') <br>
 
+![TotalNumberOfBedsGroup](https://user-images.githubusercontent.com/114496063/208707951-2c07f235-bed0-49fe-ba07-16046839ac80.png)
+
 bed_counts = df['bed'].value_counts() <br>
 bed_counts <br>
 
