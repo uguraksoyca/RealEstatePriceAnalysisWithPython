@@ -275,7 +275,7 @@ print(f"On average, this listing price based on bath predictor is $ {mae_5:.2f} 
 
 ### On average, this listing price based on bath predictor is $ 261569.96 off of any given price.
 
-## 2.3.3) Random Forest Regression - All Dataset  <br>
+## 2.3.3) Random Forest Regression - All Columns  <br>
 
 X6 = df.drop("price", axis = 1) <br>
 y6 = df["price"] <br>
@@ -304,3 +304,5 @@ results = pd.DataFrame({'SL_Bath_and_Price': [mae, r2, r2_percent], <br>
                   
 results
 ![results](https://user-images.githubusercontent.com/114496063/208959873-ac643742-921f-4d20-a9ec-68e68e436f30.png)
+
+## As we can see in the results dataframe, Random Forest regression model which is model 6 is the best model.
