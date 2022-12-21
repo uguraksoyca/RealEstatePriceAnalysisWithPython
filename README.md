@@ -162,15 +162,15 @@ df.to_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean_Without_Outlie
 
 # 2-) REGRESSION ANALYSIS  <br>
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error, r2_score
+from sklearn.model_selection import train_test_split <br>
+from sklearn.linear_model import LinearRegression <br> 
+from sklearn.ensemble import RandomForestRegressor <br>
+from sklearn.metrics import mean_absolute_error, r2_score <br>
 
-corrM = df.corr()
+corrM = df.corr() <br>
 corrM
 
-### We can see that bath and house_size has more that 0.6 correlation with price. We can use these variables to create linear regression models.
+### We can see that bath and house_size has more that 0.6 correlation with price. We can use these variables to create linear regression models. <br>
 
 
 ## 2.1) Single Linear Regression  <br>
