@@ -1,3 +1,4 @@
+![Correlation Matrix](https://user-images.githubusercontent.com/114496063/208973051-da6dc2d0-d8b6-4abd-80a7-d27ce07fa11b.png)
 # RealEstatePriceAnalysisWithPython
 Dataset : https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset <br>
 
@@ -172,6 +173,7 @@ corrM
 
 ### We can see that bath and house_size has more that 0.6 correlation with price. We can use these variables to create linear regression models. <br>
 
+![Correlation Matrix](https://user-images.githubusercontent.com/114496063/208973139-c115c710-25cc-4dba-b13b-e628bc28c0ee.png)
 
 ## 2.1) Single Linear Regression  <br>
 df=pd.read_csv('C:/WorkSamples/HousePricePrediction/Realtor_Data_Clean_Without_Outliers.csv') <br>
