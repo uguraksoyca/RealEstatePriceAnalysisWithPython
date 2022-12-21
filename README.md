@@ -190,11 +190,11 @@ r2_percent = r2*100 <br>
 
 print(f"The accuracy of price based on bath predictor is: {r2_percent:.2f}%")  <br>
 
-The accuracy of price based on bath predictor is: 38.92% <br>
+### The accuracy of price based on bath predictor is: 38.92% <br>
  
 print(f"On average, this listing price based on bath predictor is $ {mae:.2f} off of any given price.") <br>
 
-On average, this listing price based on bath predictor is $ 249138.27 off of any given price. <br>
+### On average, this listing price based on bath predictor is $ 249138.27 off of any given price. <br>
 
 ## 2.1.2) Single Linear Regression - House Size and Price  <br>
 
@@ -209,11 +209,11 @@ r2_percent_2 = r2_2*100 <br>
 
 print(f"The accuracy of price based on house_size predictor is: {r2_percent_2:.2f}%") <br>
 
-The accuracy of price based on house_size predictor is: 36.83% <br>
+### The accuracy of price based on house_size predictor is: 36.83% <br>
 
 print(f"On average, this listing price based on house_size predictor is $ {mae_2:.2f} off of any given price.") <br>
 
-On average, this listing price based on house_size predictor is $ 247080.12 off of any given price. <br>
+### On average, this listing price based on house_size predictor is $ 247080.12 off of any given price. <br>
 
 ## 2.2) Multi Linear Regression  <br>
 
@@ -229,11 +229,11 @@ r2_3 = r2_score(y_test3, model_pred3) <br>
 r2_percent_3 = r2_3*100 <br>
 print(f"The accuracy of price based on house_size predictor is: {r2_percent_3:.2f}%") <br>
 
-The accuracy of price based on house_size predictor is: 42.66% <br>
+### The accuracy of price based on house_size predictor is: 42.66% <br>
 
 print(f"On average, this listing price based on house_size predictor is $ {mae_3:.2f} off of any given price.") <br>
 
-On average, this listing price based on house_size predictor is $ 235160.45 off of any given price. <br>
+### On average, this listing price based on house_size predictor is $ 235160.45 off of any given price. <br>
 
 ## 2.3) Random Forest Regression  <br>
 ## 2.3.1) Random Forest Regression - Bath and Price  <br>
@@ -249,11 +249,11 @@ r2_4 = r2_score(y_test4, model_pred4) <br>
 r2_percent_4 = r2_4*100 <br>
 print(f"The accuracy of price based on bath predictor is: {r2_percent_4:.2f}%") <br>
 
-The accuracy of price based on bath predictor is: 42.55% <br>
+### The accuracy of price based on bath predictor is: 42.55% <br>
 
 print(f"On average, this listing price based on bath predictor is $ {mae_4:.2f} off of any given price.") <br>
 
-On average, this listing price based on bath predictor is $ 237871.41 off of any given price. <br> 
+### On average, this listing price based on bath predictor is $ 237871.41 off of any given price. <br> 
 
 ## 2.3.2) Random Forest Regression - House Size and Price  <br>
 
@@ -269,11 +269,11 @@ r2_percent_5 = r2_5*100 <br>
 
 print(f"The accuracy of price based on house_size predictor is: {r2_percent_5:.2f}%") <br>
 
-The accuracy of price based on house_size predictor is: 28.27% <br>
+### The accuracy of price based on house_size predictor is: 28.27% <br>
 
 print(f"On average, this listing price based on bath predictor is $ {mae_5:.2f} off of any given price.") <br>
 
-On average, this listing price based on bath predictor is $ 261569.96 off of any given price.
+### On average, this listing price based on bath predictor is $ 261569.96 off of any given price.
 
 ## 2.3.3) Random Forest Regression - All Dataset  <br>
 
